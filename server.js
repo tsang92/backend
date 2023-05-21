@@ -21,6 +21,7 @@ mongoose.connect(process.env.MONGO_URI, {
 const app = express()
 app.use(express.static('public'))
 app.use(express.json())
+console.log("hello!")
 app.use(express.urlencoded({extended: true}))
 app.use('*', cors())
 app.use(fileUpload({
