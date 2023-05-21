@@ -7,6 +7,8 @@ const path = require('path');
 router.get('/:id', async (req, res) => {
   try {
     const message = await Message.findById(req.params.id);
+    console.log("hello")
+    console.log(message)
 
     if (!message) {
       return res.status(404).send('Message not found');
